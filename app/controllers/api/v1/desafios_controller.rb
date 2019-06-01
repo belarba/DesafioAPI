@@ -39,7 +39,7 @@ module Api
       private
 
       def event_params
-        params.require(:desafio).permit(:title, :body)
+        params.require(:desafio).permit(:event, :timestamp)
       end
 
     end

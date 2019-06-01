@@ -4,7 +4,16 @@ class DesafiosController < ApplicationController
   end
 
   def input_insert
-    raise
+    params[:timestamp] = Time.now
+    desafio = Desafio.new(event_params)
+    desafio.save
+    redirect_to test_path
+  end
+
+  private
+
+  def event_params
+    params.permit(:event, :timestamp)
   end
 
 end
