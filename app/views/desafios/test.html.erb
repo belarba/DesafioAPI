@@ -7,3 +7,11 @@
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <input type="submit" value="Insert">
 </form>
+
+<form action="#" id="add-form">
+  <input type="text" name="event" id="event" value="buy">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="timestamp" value= <%= Time.now %> hidden>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="submit" value="JS Insert">
+</form>
