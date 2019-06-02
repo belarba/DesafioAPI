@@ -7,14 +7,14 @@ const addEvent = () => {
       headers: { 'Content-type': 'application/json' },
       body: JSON.stringify({ event: event, timestamp: timestamp })
     })
-      .then(response => response.json())
-      .then((data) => {});
+      .then(response => response.json());
   };
 
   commentForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const event_add = document.querySelector('#event');
     const posted = postMessage(event_add.value, new Date());
+    location.reload();
   });
 }
 
