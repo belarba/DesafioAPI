@@ -11,4 +11,6 @@ import { addEvent } from '../components/submit';
 addEvent();
 import { updateJson } from '../components/textarea';
 updateJson();
+import { autoComplete } from '../components/autocomplete';
+autoComplete();
 console.log('Hello World from Webpacker')

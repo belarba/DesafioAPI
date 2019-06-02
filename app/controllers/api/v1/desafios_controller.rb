@@ -38,7 +38,7 @@ module Api
       end
 
       def event
-        event = Desafio.where("event LIKE ?", "#{params[:query]}%")
+        event = Desafio.where('event LIKE ?', "#{params[:query]}%").select('event').distinct
         render json: { data: event }, status: :ok
       end
 
@@ -47,7 +47,6 @@ module Api
       def event_params
         params.permit(:event, :timestamp)
       end
-
     end
   end
 end

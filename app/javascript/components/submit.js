@@ -1,8 +1,6 @@
 const addEvent = () => {
   const commentForm = document.querySelector('#add-form');
 
-  console.log("Opa");
-
   const postMessage = (event, timestamp) => {
     fetch("http://localhost:3000/api/v1/desafios", {
       method: "POST",
