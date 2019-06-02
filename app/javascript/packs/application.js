@@ -9,4 +9,6 @@
 import 'bootstrap';
 import { addEvent } from '../components/submit';
 addEvent();
+import { updateJson } from '../components/textarea';
+updateJson();
 console.log('Hello World from Webpacker')

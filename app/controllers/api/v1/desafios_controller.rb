@@ -37,6 +37,11 @@ module Api
         end
       end
 
+      def event
+        event = Desafio.where("event LIKE ?", "#{params[:query]}%")
+        render json: { data: event }, status: :ok
+      end
+
       private
 
       def event_params

@@ -16,13 +16,8 @@ const addEvent = () => {
   commentForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const event_add = document.querySelector('#event');
-    //console.log("submeteu");
-    //console.log(JSON.stringify({ event: event_add.value, timestamp: new Date() }));
     const posted = postMessage(event_add.value, new Date());
   });
 }
-
-
-
 
 export { addEvent }
