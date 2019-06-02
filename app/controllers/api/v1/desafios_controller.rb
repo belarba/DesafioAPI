@@ -1,6 +1,7 @@
 module Api
   module V1
     class DesafiosController < ApplicationController
+      protect_from_forgery with: :null_session
       def index
         events = Desafio.all
         render json: { status: 'SUCCESS', message: 'Loaded events', data: events }, status: :ok
@@ -39,7 +40,7 @@ module Api
       private
 
       def event_params
-        params.require(:desafio).permit(:event, :timestamp)
+        params.permit(:event, :timestamp)
       end
 
     end
