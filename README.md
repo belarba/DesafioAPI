@@ -9,6 +9,10 @@ Tecnologias utilizadas:
 * Postgresql
 
 Para executar é necessário ter o rails, baixar a solução, ir até o diretório e rodar o comando
+```bash
+rails db:migrate
+```
+após iniciar o servidor com
 
 ```bash
 rails s
